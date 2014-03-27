@@ -1,0 +1,54 @@
+<!--
+  Copyright 2012 The Android Open Source Project
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+      http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> -->
+	
+<!-- 	<ImageView
+	    android:id="@+id/swipe_left_semicircle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/semi_circle_left_red"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" /> -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_alert"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:paddingTop="100dp">
+	<TextView 
+	     android:id="@+id/fullscreen_content"
+	     android:layout_width="200dp"
+	     android:layout_height="fill_parent"
+	     android:keepScreenOn="true"
+	     android:text="@string/match_content"
+	     android:textColor="#000000"
+	     android:textSize="35sp"
+	     android:background="@color/textview_background"
+	     android:alpha="1"
+	     android:layout_gravity="center"
+	     android:gravity="center" />
+</LinearLayout>
+<!-- 	<ImageView
+	    android:id="@+id/swipe_right_semicircle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/semi_circle_right_green"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true" /> -->
+<!-- </RelativeLayout> -->

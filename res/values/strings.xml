@@ -1,0 +1,35 @@
+<!--
+  Copyright 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Better Money Habits</string>
+
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="match_content">You just spent $5.57. Would you like to match into savings?</string>
+ 
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="demo_collection">Demo Collection</string>
+    <string name="bmh_goal_name">Spring Break Trip</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="success_content">Match Complete!</string>
+    <string name="success_goal_progress">$5.57/$8.33</string>
+    <string name="title_activity_goal_progress">GoalProgressActivity</string>
+    <string name="title_activity_bmhalert_circle">Spring Break Trip</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="arrow_instructions">No&lt;&lt;&lt;&lt; &gt;&gt;&gt;&gt;Yes</string>
+</resources>
