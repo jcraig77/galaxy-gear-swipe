@@ -1,3 +1,7 @@
 /.project
 .DS_Store
 /bin
+.settings
+.classpath
+project.properties
+/gen
