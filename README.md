@@ -1,4 +1,4 @@
-![Alert Screen](assets/screen1.png)
+![Alert Screen](browse/assets/screen1.png)
 
 ![Alert Screen](assets/screen2.png)
 
