@@ -34,7 +34,7 @@
         android:id="@+id/confirm_text"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Transfer $5.57 to savings? Tap to confirm." 
+        android:text="@string/confirm_text" 
         android:textSize="30sp"
         android:background="@color/amount_background"
         android:gravity="center"

@@ -11,9 +11,10 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int amount_background=0x7f040001;
-        public static final int amount_textColor=0x7f040002;
-        public static final int textview_background=0x7f040000;
+        public static final int amount_background=0x7f040002;
+        public static final int amount_textColor=0x7f040003;
+        public static final int app_background_color=0x7f040000;
+        public static final int textview_background=0x7f040001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -69,19 +70,25 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f06000d;
+        public static final int alert_text=0x7f060011;
+        public static final int amount_dollars=0x7f060010;
+        public static final int amount_text=0x7f06000f;
         public static final int app_name=0x7f060000;
         public static final int arrow_instructions=0x7f06000e;
         public static final int bmh_goal_name=0x7f060005;
+        public static final int confirm_text=0x7f060012;
         public static final int demo_collection=0x7f060004;
         public static final int demo_external_activity=0x7f060003;
         public static final int dummy_section_text=0x7f060001;
         public static final int hello_world=0x7f06000c;
         public static final int match_content=0x7f060002;
         public static final int no_button=0x7f060007;
+        public static final int progress_subtext=0x7f060013;
         public static final int success_content=0x7f060008;
         public static final int success_goal_progress=0x7f060009;
         public static final int title_activity_bmhalert_circle=0x7f06000b;
         public static final int title_activity_goal_progress=0x7f06000a;
+        public static final int transfer_complete=0x7f060014;
         public static final int yes_button=0x7f060006;
     }
 }
