@@ -21,19 +21,14 @@ package com.example.android.effectivenavigation;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.GestureDetector;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -95,7 +90,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             }
         });
         
-        mViewPager.setCurrentItem(1);
+        mViewPager.setCurrentItem(0);
 
         // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mAppSectionsPagerAdapter.getCount(); i++) {
@@ -143,18 +138,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         	
             switch (i) {
 	            case 0:
-	            	fragment = new BMHProgressSectionFragment();
-	                args = new Bundle();
-                    args.putBoolean("match", false);
-                    fragment.setArguments(args);
-                    return fragment;
+	            	return new BMHAlertSectionFragment();
+	            	
                 case 1:
-                    return new BMHAlertSectionFragment();
-                case 2:
-                	fragment = new BMHProgressSectionFragment();
-	                args = new Bundle();
-                    args.putBoolean("match", true);
-                    fragment.setArguments(args);
+                	fragment = new BMHConfirmSectionFragment();
                     return fragment;
 
                 default:
@@ -164,7 +151,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Override
@@ -195,19 +182,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_section_bmhalert, container, false);
             
-            gestureDetector = new GestureDetector(this.getActivity(), new GestureListener());
-            
-            TextView tv = (TextView)rootView.findViewById(R.id.fullscreen_content);
-            tv.setOnTouchListener(new OnTouchListener() {
-    			
-    			@Override
-    			public boolean onTouch(View v, MotionEvent event) {
-    				 if (gestureDetector.onTouchEvent(event)) {
-    	                    return true;
-    	                }
-    	                return false;
-    			}
-    		});
+//            gestureDetector = new GestureDetector(this.getActivity(), new GestureListener());
+//            
+//            TextView tv = (TextView)rootView.findViewById(R.id.fullscreen_content);
+//            tv.setOnTouchListener(new OnTouchListener() {
+//    			
+//    			@Override
+//    			public boolean onTouch(View v, MotionEvent event) {
+//    				 if (gestureDetector.onTouchEvent(event)) {
+//    	                    return true;
+//    	                }
+//    	                return false;
+//    			}
+//    		});
             return rootView;
         }
     }
@@ -234,6 +221,31 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	            return true;
 	        }
         	return false;
+        }
+    }
+    
+    /**
+     * A dummy fragment representing a section of the app, but that simply displays dummy text.
+     */
+    public class BMHConfirmSectionFragment extends Fragment {
+
+        public static final String ARG_SECTION_NUMBER = "section_number";
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_section_bmhconfirm, container, false);
+            rootView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					startActivity(new Intent(getActivity(), ProgressActivity.class));
+					
+				}
+			});
+            
+            
+            return rootView;
         }
     }
 
